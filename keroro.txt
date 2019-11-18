@@ -1,0 +1,74 @@
+TO comment :message
+END
+
+TO setpencolor_default
+  setpencolor "#000000
+END
+
+TO paint :color
+  pu rt 45 fd 5 pd
+  setpencolor :color fill
+  pu bk 5 lt 45 pd
+  setpencolor_default
+END
+
+cs
+setpensize 3
+setpencolor_default
+
+comment "head_1
+repeat 30 [ fd 1 rt 1 ]
+repeat 30 [ fd 2 rt 1 ]
+
+comment "eye_1
+lt 90 
+repeat 360 [ fd 0.8 rt 1 ]
+pu rt 90 fd 40 lt 90 pd
+repeat 360 [ fd 0.4 rt 1 ]
+paint "#424242
+pu rt 90 bk 40 lt 90 pd
+rt 90
+
+comment "eye_2
+pu
+repeat 30 [ fd 3 rt 1 ]
+repeat 30 [ fd 3 rt 1 ]
+pd
+rt 90 
+repeat 360 [ fd 0.8 rt 1 ]
+pu rt 90 fd 40 lt 90 pd
+repeat 360 [ fd 0.4 rt 1 ]
+paint "#424242
+pu rt 90 bk 40 lt 90 pd
+lt 90
+
+comment "head_2
+repeat 30 [ fd 2 rt 1 ]
+repeat 30 [ fd 1 rt 1 ]
+
+repeat 30 [ fd 1 rt 1 ]
+repeat 30 [ fd 2 rt 1 ]
+repeat 30 [ fd 3 rt 1 ]
+
+comment "face
+pu rt 90 fd 20 pd
+lt 45
+fd 50 bk 50
+rt 90
+fd 50 bk 50
+lt 45
+pu bk 20 lt 90 pd
+
+comment "head_3
+repeat 30 [ fd 3 rt 1 ]
+repeat 30 [ fd 2 rt 1 ]
+repeat 30 [ fd 1 rt 1 ]
+paint "#33FF00
+
+comment "cheeks
+pu rt 90 fd 20 lt 90 pd
+repeat 360 [ fd 0.4 rt 1 ]
+paint "#FF3030
+pu rt 90 fd 180 lt 90 pd
+repeat 360 [ fd 0.4 rt 1 ]
+paint "#FF3030
